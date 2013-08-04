@@ -1246,7 +1246,7 @@ Timeout 60
 				</Item>
 			</Item>
 		</Item>
-		<Item Name="Main.vi.vi" Type="VI" URL="../Main.vi.vi"/>
+		<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
 		<Item Name="motor test.vi" Type="VI" URL="../motor test.vi"/>
 		<Item Name="Variables.lvlib" Type="Library" URL="../Variables.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
@@ -1427,7 +1427,6 @@ Timeout 60
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="RoboticsProject_FPGATarget_FPGAToplevel_sB+LsOQPz8M.lvbitx" Type="Document" URL="../FPGA Bitfiles/RoboticsProject_FPGATarget_FPGAToplevel_sB+LsOQPz8M.lvbitx"/>
-			<Item Name="RoboticsProject_FPGATarget_FPGAToplevel_sB+LsOQPz8M.lvbitx" Type="Document" URL="../Sensors and Mapping/FPGA Bitfiles/RoboticsProject_FPGATarget_FPGAToplevel_sB+LsOQPz8M.lvbitx"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>

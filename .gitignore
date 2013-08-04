@@ -4,5 +4,7 @@
 # Except for the labview directory:
 
 !.gitignore
-!labview/
-!labview/*/
+!Swinbot/
+!Swinbot/*/
+!Swinbot/*/*
+!Swinbot/*/*/
