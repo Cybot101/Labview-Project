@@ -1,0 +1,8 @@
+# Ignore everything:
+/*
+
+# Except for the labview directory:
+
+!.gitignore
+!labview/
+!labview/*/
