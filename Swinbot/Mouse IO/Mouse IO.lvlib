@@ -12,4 +12,5 @@
 	</Item>
 	<Item Name="Mouse Init.vi" Type="VI" URL="../Mouse Init.vi"/>
 	<Item Name="Mouse Loop.vi" Type="VI" URL="../Mouse Loop.vi"/>
+	<Item Name="Write Register.vi" Type="VI" URL="../Write Register.vi"/>
 </Library>
