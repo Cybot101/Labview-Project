@@ -5,4 +5,5 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Item Name="Compass Begin.vi" Type="VI" URL="../Compass Begin.vi"/>
 	<Item Name="Compass Get Heading.vi" Type="VI" URL="../Compass Get Heading.vi"/>
+	<Item Name="Gyro test.vi" Type="VI" URL="../Gyro test.vi"/>
 </Library>
