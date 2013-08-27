@@ -1,0 +1,9 @@
+[My Computer]
+My Computer = "169.254.66.111"
+
+[NI-cRIO]
+NI-cRIO = "10.164.8.31"
+
+[NI-sbRIO9636-SwinBots]
+NI-sbRIO9636-SwinBots = "169.254.66.100"
+
