@@ -25,13 +25,11 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="certaintyGraph Computer Ver.vi" Type="VI" URL="../certaintyGraph Computer Ver.vi"/>
-		<Item Name="certaintyGraph With error.vi" Type="VI" URL="../certaintyGraph With error.vi"/>
 		<Item Name="Compass PD test.vi" Type="VI" URL="../PC/Compass PD test.vi"/>
 		<Item Name="D-Link Colour Tracking.vi" Type="VI" URL="../Vision/D-Link Colour Tracking.vi"/>
 		<Item Name="JoyMath.vi" Type="VI" URL="../PC/JoyMath.vi"/>
 		<Item Name="Location Map View.vi" Type="VI" URL="../PC/Location Map View.vi"/>
-		<Item Name="Map Viewer.vi" Type="VI" URL="../Host Test/Map Viewer.vi"/>
+		<Item Name="ManualControl.vi" Type="VI" URL="../PC/ManualControl.vi"/>
 		<Item Name="shared.lvlib" Type="Library" URL="../shared.lvlib"/>
 		<Item Name="TestBench.vi" Type="VI" URL="../FPGA/TestBench.vi"/>
 		<Item Name="XboxControl.vi" Type="VI" URL="../PC/XboxControl.vi"/>
@@ -51,6 +49,9 @@
 				<Item Name="Draw Rect.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Rect.vi"/>
 				<Item Name="Draw Text at Point.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Text at Point.vi"/>
 				<Item Name="Draw Text in Rect.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Text in Rect.vi"/>
+				<Item Name="Edge New.ctl" Type="VI" URL="/&lt;vilib&gt;/vision/Measure.llb/Edge New.ctl"/>
+				<Item Name="Edge Options.ctl" Type="VI" URL="/&lt;vilib&gt;/vision/Measure.llb/Edge Options.ctl"/>
+				<Item Name="Edge Polarity.ctl" Type="VI" URL="/&lt;vilib&gt;/vision/Measure.llb/Edge Polarity.ctl"/>
 				<Item Name="Empty Picture" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Empty Picture"/>
 				<Item Name="Error Cluster From Error Code.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Cluster From Error Code.vi"/>
 				<Item Name="Get Text Rect.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Get Text Rect.vi"/>
@@ -59,6 +60,7 @@
 				<Item Name="IMAQ Create" Type="VI" URL="/&lt;vilib&gt;/vision/Basics.llb/IMAQ Create"/>
 				<Item Name="Imaq Dispose" Type="VI" URL="/&lt;vilib&gt;/vision/Basics.llb/Imaq Dispose"/>
 				<Item Name="IMAQ Image.ctl" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/IMAQ Image.ctl"/>
+				<Item Name="IMAQ Overlay Line" Type="VI" URL="/&lt;vilib&gt;/vision/Overlay.llb/IMAQ Overlay Line"/>
 				<Item Name="IMAQ Overlay Text" Type="VI" URL="/&lt;vilib&gt;/vision/Overlay.llb/IMAQ Overlay Text"/>
 				<Item Name="Initialize Joystick.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/inputDevices.llb/Initialize Joystick.vi"/>
 				<Item Name="joystickAcquire.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/inputDevices.llb/joystickAcquire.vi"/>
@@ -81,11 +83,13 @@
 				<Item Name="PCT Pad String.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/PCT Pad String.vi"/>
 				<Item Name="Query Input Devices.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/inputDevices.llb/Query Input Devices.vi"/>
 				<Item Name="RGB to Color.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/colorconv.llb/RGB to Color.vi"/>
+				<Item Name="Search Line.ctl" Type="VI" URL="/&lt;vilib&gt;/vision/Measure.llb/Search Line.ctl"/>
 				<Item Name="Set Pen State.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Set Pen State.vi"/>
+				<Item Name="Straight Edge Options.ctl" Type="VI" URL="/&lt;vilib&gt;/vision/Measure.llb/Straight Edge Options.ctl"/>
+				<Item Name="Straight Edge Process.ctl" Type="VI" URL="/&lt;vilib&gt;/vision/Measure.llb/Straight Edge Process.ctl"/>
 				<Item Name="Version To Dotted String.vi" Type="VI" URL="/&lt;vilib&gt;/_xctls/Version To Dotted String.vi"/>
 				<Item Name="XControlSupport.lvlib" Type="Library" URL="/&lt;vilib&gt;/_xctls/XControlSupport.lvlib"/>
 			</Item>
-			<Item Name="certaintyGraph.vi" Type="VI" URL="../Certainty Graph/certaintyGraph.vi"/>
 			<Item Name="Convert JPEG To Image.vi" Type="VI" URL="../Vision/Convert JPEG To Image.vi"/>
 			<Item Name="EIO_ResourceConfig.ctl" Type="VI" URL="/&lt;vilib&gt;/eio/EIO_ResourceConfig.ctl"/>
 			<Item Name="Grab Image from Android.vi" Type="VI" URL="../Vision/Grab Image from Android.vi"/>
@@ -109,7 +113,6 @@
 			<Item Name="nivissvc.dll" Type="Document" URL="nivissvc.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Sensor to Certainty graph.vi" Type="VI" URL="../Certainty Graph/Sensor to Certainty graph.vi"/>
 			<Item Name="SizeOrderedMorphology.vi" Type="VI" URL="../Vision/SizeOrderedMorphology.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
@@ -1716,6 +1719,7 @@ Timeout 60
 				</Item>
 			</Item>
 		</Item>
+		<Item Name="FPGA_ref.ctl" Type="VI" URL="../FPGA_ref.ctl"/>
 		<Item Name="Globals.vi" Type="VI" URL="../Globals.vi"/>
 		<Item Name="Mouse Compass Test.vi" Type="VI" URL="../Mouse Compass Test.vi"/>
 		<Item Name="SPI Host.vi" Type="VI" URL="../SPI Host.vi"/>
@@ -1726,6 +1730,9 @@ Timeout 60
 				<Item Name="Check if File or Folder Exists.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Check if File or Folder Exists.vi"/>
 				<Item Name="Color to RGB.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/colorconv.llb/Color to RGB.vi"/>
 				<Item Name="Draw Line.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Line.vi"/>
+				<Item Name="Edge New.ctl" Type="VI" URL="/&lt;vilib&gt;/vision/Measure.llb/Edge New.ctl"/>
+				<Item Name="Edge Options.ctl" Type="VI" URL="/&lt;vilib&gt;/vision/Measure.llb/Edge Options.ctl"/>
+				<Item Name="Edge Polarity.ctl" Type="VI" URL="/&lt;vilib&gt;/vision/Measure.llb/Edge Polarity.ctl"/>
 				<Item Name="Error Cluster From Error Code.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Cluster From Error Code.vi"/>
 				<Item Name="Get LV Class Default Value.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Default Value.vi"/>
 				<Item Name="I2C Host.lvlib" Type="Library" URL="/&lt;vilib&gt;/IEDriver/SPIandI2C/Host/I2C/I2C Host.lvlib"/>
@@ -1733,6 +1740,7 @@ Timeout 60
 				<Item Name="IMAQ Create" Type="VI" URL="/&lt;vilib&gt;/vision/Basics.llb/IMAQ Create"/>
 				<Item Name="Imaq Dispose" Type="VI" URL="/&lt;vilib&gt;/vision/Basics.llb/Imaq Dispose"/>
 				<Item Name="IMAQ Image.ctl" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/IMAQ Image.ctl"/>
+				<Item Name="IMAQ Overlay Line" Type="VI" URL="/&lt;vilib&gt;/vision/Overlay.llb/IMAQ Overlay Line"/>
 				<Item Name="IMAQ Overlay Text" Type="VI" URL="/&lt;vilib&gt;/vision/Overlay.llb/IMAQ Overlay Text"/>
 				<Item Name="IP SPI&amp;I2C.lvlib" Type="Library" URL="/&lt;vilib&gt;/IEDriver/SPIandI2C/FPGA/Library/IP SPI&amp;I2C.lvlib"/>
 				<Item Name="LabVIEWHTTPClient.lvlib" Type="Library" URL="/&lt;vilib&gt;/httpClient/LabVIEWHTTPClient.lvlib"/>
@@ -1769,12 +1777,15 @@ Timeout 60
 				<Item Name="Particle Parameters" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/Particle Parameters"/>
 				<Item Name="Path To Command Line String.vi" Type="VI" URL="/&lt;vilib&gt;/AdvancedString/Path To Command Line String.vi"/>
 				<Item Name="PathToUNIXPathString.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/CFURL.llb/PathToUNIXPathString.vi"/>
+				<Item Name="Search Line.ctl" Type="VI" URL="/&lt;vilib&gt;/vision/Measure.llb/Search Line.ctl"/>
 				<Item Name="Simple Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Simple Error Handler.vi"/>
 				<Item Name="SPI Host.lvlib" Type="Library" URL="/&lt;vilib&gt;/IEDriver/SPIandI2C/Host/SPI/SPI Host.lvlib"/>
+				<Item Name="Straight Edge Options.ctl" Type="VI" URL="/&lt;vilib&gt;/vision/Measure.llb/Straight Edge Options.ctl"/>
+				<Item Name="Straight Edge Process.ctl" Type="VI" URL="/&lt;vilib&gt;/vision/Measure.llb/Straight Edge Process.ctl"/>
+				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
 			</Item>
 			<Item Name="FPGA SPI_Cmd.ctl" Type="VI" URL="../FPGA/Controls/FPGA SPI_Cmd.ctl"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
-			<Item Name="mouse_parse_packet.vi" Type="VI" URL="../../../../../LabVIEW Data/Serial Mouse Project/mouse_parse_packet.vi"/>
 			<Item Name="NIARC_FPGATarget_FPGACompile_e4XhunWUay0.lvbitx" Type="Document" URL="../FPGA Bitfiles/NIARC_FPGATarget_FPGACompile_e4XhunWUay0.lvbitx"/>
 			<Item Name="NIARC_FPGATarget_FPGACompile_yq6Hl1z977U.lvbitx" Type="Document" URL="../FPGA Bitfiles/NIARC_FPGATarget_FPGACompile_yq6Hl1z977U.lvbitx"/>
 			<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">
@@ -1786,6 +1797,8 @@ Timeout 60
 			<Item Name="nivissvc.dll" Type="Document" URL="nivissvc.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="ServoHostFlipper.vi" Type="VI" URL="../Servo/ServoHostFlipper.vi"/>
+			<Item Name="ServoHostLatch.vi" Type="VI" URL="../Servo/ServoHostLatch.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
