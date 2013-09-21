@@ -132,7 +132,6 @@
 		<Property Name="target.FPProtocolGlobals_ControlTimeLimit" Type="Int">300</Property>
 		<Property Name="target.getDefault-&gt;WebServer.Port" Type="Int">80</Property>
 		<Property Name="target.getDefault-&gt;WebServer.Timeout" Type="Int">60</Property>
-		<Property Name="target.IOScan.Enabled" Type="Bool">true</Property>
 		<Property Name="target.IOScan.Faults" Type="Str"></Property>
 		<Property Name="target.IOScan.NetVarPeriod" Type="UInt">100</Property>
 		<Property Name="target.IOScan.NetWatchdogEnabled" Type="Bool">false</Property>
@@ -208,9 +207,6 @@ Timeout 60
 		<Item Name="Motor Control" Type="Folder" URL="../Motor Control">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="Mouse IO" Type="Folder" URL="../Mouse IO">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
-		</Item>
 		<Item Name="Mouse Serial" Type="Folder" URL="../Mouse Serial">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
@@ -223,13 +219,9 @@ Timeout 60
 		<Item Name="Servo" Type="Folder" URL="../Servo">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="SPI Host API" Type="Folder" URL="../SPI Host API">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
-		</Item>
 		<Item Name="Vision" Type="Folder" URL="../Vision">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="Certaintygraph test.vi" Type="VI" URL="../Certaintygraph test.vi"/>
 		<Item Name="Chassis" Type="sbRIO Chassis">
 			<Property Name="crio.ProgrammingMode" Type="Str">fpga</Property>
 			<Property Name="crio.ResourceID" Type="Str">RIO0</Property>
@@ -248,9 +240,6 @@ Timeout 60
 				<Property Name="Target Class" Type="Str">sbRIO-9636</Property>
 				<Property Name="Top-Level Timing Source" Type="Str">40 MHz Onboard Clock</Property>
 				<Property Name="Top-Level Timing Source Is Default" Type="Bool">true</Property>
-				<Item Name="Code" Type="Folder" URL="../FPGA/Code">
-					<Property Name="NI.DISK" Type="Bool">true</Property>
-				</Item>
 				<Item Name="Connector0" Type="Folder">
 					<Item Name="AI0" Type="Elemental IO">
 						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
@@ -1203,9 +1192,6 @@ Timeout 60
 						<Property Name="FPGA.PersistentID" Type="Str">{85489D26-0B5C-416B-8820-92A2F6725856}</Property>
 					</Item>
 				</Item>
-				<Item Name="Controls" Type="Folder" URL="../FPGA/Controls">
-					<Property Name="NI.DISK" Type="Bool">true</Property>
-				</Item>
 				<Item Name="FIFOs" Type="Folder">
 					<Item Name="SPI_Read Data" Type="FPGA FIFO">
 						<Property Name="Actual Number of Elements" Type="UInt">1029</Property>
@@ -1299,9 +1285,6 @@ Timeout 60
 </Property>
 						<Property Name="FPGA.PersistentID" Type="Str">{212FACCD-065D-4BEF-879F-D2EF0733A17F}</Property>
 					</Item>
-				</Item>
-				<Item Name="SPI" Type="Folder" URL="../FPGA/SPI">
-					<Property Name="NI.DISK" Type="Bool">true</Property>
 				</Item>
 				<Item Name="Utill" Type="Folder" URL="../FPGA/Utill">
 					<Property Name="NI.DISK" Type="Bool">true</Property>
@@ -1722,8 +1705,6 @@ Timeout 60
 		<Item Name="FPGA_ref.ctl" Type="VI" URL="../FPGA_ref.ctl"/>
 		<Item Name="Globals.vi" Type="VI" URL="../Globals.vi"/>
 		<Item Name="Mouse Compass Test.vi" Type="VI" URL="../Mouse Compass Test.vi"/>
-		<Item Name="SPI Host.vi" Type="VI" URL="../SPI Host.vi"/>
-		<Item Name="SPI_Example_Host.vi" Type="VI" URL="../SPI_Example_Host.vi"/>
 		<Item Name="Variables.lvlib" Type="Library" URL="../Variables.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -1778,27 +1759,22 @@ Timeout 60
 				<Item Name="Path To Command Line String.vi" Type="VI" URL="/&lt;vilib&gt;/AdvancedString/Path To Command Line String.vi"/>
 				<Item Name="PathToUNIXPathString.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/CFURL.llb/PathToUNIXPathString.vi"/>
 				<Item Name="Search Line.ctl" Type="VI" URL="/&lt;vilib&gt;/vision/Measure.llb/Search Line.ctl"/>
-				<Item Name="Simple Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Simple Error Handler.vi"/>
-				<Item Name="SPI Host.lvlib" Type="Library" URL="/&lt;vilib&gt;/IEDriver/SPIandI2C/Host/SPI/SPI Host.lvlib"/>
 				<Item Name="Straight Edge Options.ctl" Type="VI" URL="/&lt;vilib&gt;/vision/Measure.llb/Straight Edge Options.ctl"/>
 				<Item Name="Straight Edge Process.ctl" Type="VI" URL="/&lt;vilib&gt;/vision/Measure.llb/Straight Edge Process.ctl"/>
 				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
 			</Item>
-			<Item Name="FPGA SPI_Cmd.ctl" Type="VI" URL="../FPGA/Controls/FPGA SPI_Cmd.ctl"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="NIARC_FPGATarget_FPGACompile_e4XhunWUay0.lvbitx" Type="Document" URL="../FPGA Bitfiles/NIARC_FPGATarget_FPGACompile_e4XhunWUay0.lvbitx"/>
-			<Item Name="NIARC_FPGATarget_FPGACompile_yq6Hl1z977U.lvbitx" Type="Document" URL="../FPGA Bitfiles/NIARC_FPGATarget_FPGACompile_yq6Hl1z977U.lvbitx"/>
 			<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="niFpgaSimulationCallBeginRW.vi" Type="VI" URL="/&lt;vilib&gt;/rvi/interface/Simulation/niFpgaSimulationCallBeginRW.vi"/>
 			<Item Name="nivision.dll" Type="Document" URL="nivision.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="nivissvc.dll" Type="Document" URL="nivissvc.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="ServoHostFlipper.vi" Type="VI" URL="../Servo/ServoHostFlipper.vi"/>
-			<Item Name="ServoHostLatch.vi" Type="VI" URL="../Servo/ServoHostLatch.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
